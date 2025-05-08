@@ -46,7 +46,7 @@ export default function Contact() {
     <MaxWidthWrapper className="py-10 md:py-20">
       <div className="text-center space-y-2">
         <h1 className="text-3xl md:text-4xl font-bold text-cyan-400 font-space-grotesk">
-          Get in touch — let's connect
+          Get in touch — let&apos;s connect
         </h1>
         <p className="text-md md:text-lg text-zinc-400 font-inter">
           💬 Have questions or ideas? Let’s talk! 🚀

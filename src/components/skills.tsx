@@ -2,18 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {
-  Code,
-  Figma,
-  Database,
-  Globe,
-  Server,
-  BarChart,
-  LucideIcon,
-  Cpu,
-  Bitcoin,
-  Layout,
-} from "lucide-react";
+import { Code, Database, Server, Cpu, Bitcoin, Layout } from "lucide-react";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -215,87 +204,6 @@ const FloatingElement: React.FC<FloatingElementProps> = ({ children }) => {
   return (
     <div ref={elementRef} className="transform-gpu preserve-3d">
       {children}
-    </div>
-  );
-};
-
-// Progress Bar Animation Component
-interface AnimatedProgressBarProps {
-  percentage: number;
-  color: string;
-}
-
-const AnimatedProgressBar: React.FC<AnimatedProgressBarProps> = ({
-  percentage,
-  color,
-}) => {
-  const barRef = useRef<HTMLDivElement>(null);
-  const progressRef = useRef<HTMLDivElement>(null);
-  const [animated, setAnimated] = useState<boolean>(false);
-
-  useEffect(() => {
-    if (!barRef.current || !progressRef.current) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !animated) {
-          gsap.fromTo(
-            progressRef.current,
-            { width: "0%" },
-            {
-              width: `${percentage}%`,
-              duration: 1.5,
-              ease: "elastic.out(1, 0.3)",
-              onComplete: () => setAnimated(true),
-            }
-          );
-
-          // Percentage counter animation
-          const percentageText =
-            barRef.current?.querySelector(".percentage-text");
-          if (percentageText) {
-            gsap.fromTo(
-              percentageText,
-              { textContent: "0" },
-              {
-                duration: 1.5,
-                textContent: percentage.toString(),
-                roundProps: "textContent",
-                ease: "power1.inOut",
-              }
-            );
-          }
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    observer.observe(barRef.current);
-
-    return () => {
-      if (barRef.current) {
-        observer.unobserve(barRef.current);
-      }
-    };
-  }, [percentage, animated]);
-
-  return (
-    <div ref={barRef} className="w-full">
-      <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-        <div
-          ref={progressRef}
-          className="h-full rounded-full transition-all duration-300"
-          style={{
-            width: animated ? `${percentage}%` : "0%",
-            backgroundColor: color || "#4f46e5",
-          }}
-        ></div>
-      </div>
-      <div className="flex justify-between mt-1 text-xs text-gray-500">
-        <span>Proficiency</span>
-        <span className="percentage-text">0</span>
-        <span>%</span>
-      </div>
     </div>
   );
 };
@@ -816,7 +724,6 @@ const SkillsSection: React.FC = () => {
 
         <div className="text-center mb-16 relative">
           <span className="inline-block relative">
-            <span className="title-decoration absolute -top-10 -right-10 h-20 w-20 bg-blue-500 rounded-full opacity-10 transform rotate-45 scale-50"></span>
             <h2
               ref={headingRef}
               className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400"

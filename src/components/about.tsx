@@ -39,8 +39,8 @@ export default function About() {
           <div className="text-zinc-300 flex flex-col gap-2 text-center text-sm font-semibold font-jetbrains-mono absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
             <p>git add --all</p>
             <p>
-              git commit -m "
-              <span className="text-yellow-500 ">feat: message</span>"
+              git commit -m &ldquo;
+              <span className="text-yellow-500 ">feat: message</span>&rdquo;
             </p>
             <p>
               git push origin <span className="text-yellow-500">main</span>

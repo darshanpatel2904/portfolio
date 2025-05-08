@@ -1,7 +1,6 @@
 "use client";
 import { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function HoverAnimatedText({ text }: { text: string }) {
   const ref = useRef<HTMLDivElement>(null);

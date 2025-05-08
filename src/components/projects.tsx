@@ -19,29 +19,43 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 w-full px-4">
         <ProjectCard
-          title="Multi-Chain Web3 Launchpad"
-          description="A platform supporting Ethereum, Polygon, and Solana with smart contract deployment, NFT minting, and real-time user interactions."
-          tech={["Next.js", "Solidity", "TailwindCSS", "Framer Motion"]}
-          link="https://launchpad.example.com"
+          title="Web3 Launchpad"
+          description="Multi-chain NFT platform with 20+ successful collection launches generating 10,000+ mints from 5,800+ users. Features intuitive smart contract deployment, whitelist management, and a no-code marketing website builder."
+          tech={[
+            "Next.js",
+            "Solidity",
+            "TypeScript",
+            "Web3.js",
+            "MongoDB",
+            "AWS",
+          ]}
+          link="https://w3lp.io"
           image={AiowProjectImage}
           animationDirection="left"
         />
 
         <ProjectCard
-          title="Real-time Collaborative Cloud IDE"
-          description="A Docker-powered cloud IDE with WebRTC and Socket.io for seamless team collaboration and live coding."
-          tech={["React", "Docker", "WebRTC", "Node.js"]}
-          link="https://cloudide.example.com"
-          image={CloudIdeProjectImage}
+          title="AI Verse"
+          description="Intelligent workflow automation platform using LangChain, OpenAI, and vector databases for content generation, data extraction, and multi-agent collaboration with long-term memory capabilities."
+          tech={[
+            "Next.js",
+            "LangChain",
+            "OpenAI API",
+            "Pinecone",
+            "TailwindCSS",
+            "Clerk Auth",
+          ]}
+          link="https://ai-verse-peach.vercel.app/"
+          image={AiVerseProjectImage}
           animationDirection="up"
         />
 
         <ProjectCard
-          title="Learning Management System (LMS)"
-          description="Scalable LMS with Clerk auth, country-wise pricing via PPP, and role-based content access."
-          tech={["Next.js", "PostgreSQL", "Drizzle ORM", "GSAP"]}
-          link="https://lms.example.com"
-          image={AiVerseProjectImage}
+          title="Cloud-IDE"
+          description="Real-time collaborative development environment featuring live streaming capabilities via Socket.io and WebRTC. Built with a Docker-based sandbox environment enabling secure and scalable access."
+          tech={["Docker", "Socket.io", "WebRTC", "JavaScript", "React.js"]}
+          link="https://github.com/darshanpatel2904/cloud-ide"
+          image={CloudIdeProjectImage}
           animationDirection="right"
         />
       </div>

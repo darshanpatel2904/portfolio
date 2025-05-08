@@ -1,8 +1,5 @@
-import Image from "next/image";
 import RotatingText from "./ui/rotating-text";
 import SplashCursor from "./ui/splash-cursor";
-import SkyStartsImage from "../../public/sky-star.jpeg";
-import MaxWidthWrapper from "./max-width-wrapper";
 
 export default function HomeHero() {
   return (
