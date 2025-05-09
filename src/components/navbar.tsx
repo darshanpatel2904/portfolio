@@ -6,7 +6,7 @@ import AnimatedNavLink from "@/components/ui/animated-nav-link";
 
 const githubUrl = "https://github.com/darshanpatel2904";
 const linkedinUrl = "https://www.linkedin.com/in/darshan-patel-091418234/";
-const resumeUrl = "/resume.pdf";
+const resumeUrl = "/Darshan_Patel_Resume.pdf";
 
 export default function Navbar() {
   return (
@@ -30,12 +30,7 @@ export default function Navbar() {
             icon={<Linkedin />}
             text="LinkedIn"
           />
-          <AnimatedNavLink
-            href={resumeUrl}
-            icon={<Download />}
-            text="Resume"
-            download
-          />
+          <AnimatedNavLink href={resumeUrl} icon={<Download />} text="Resume" />
         </div>
       </div>
     </nav>

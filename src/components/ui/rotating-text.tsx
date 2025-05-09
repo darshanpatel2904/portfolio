@@ -251,7 +251,10 @@ const RotatingText = forwardRef<RotatingTextRef, RotatingTextProps>(
                           )
                         ),
                       }}
-                      className={cn("inline-block", elementLevelClassName)}
+                      className={cn(
+                        "inline-block font-extrabold font-space-grotesk",
+                        elementLevelClassName
+                      )}
                     >
                       {char}
                     </motion.span>
